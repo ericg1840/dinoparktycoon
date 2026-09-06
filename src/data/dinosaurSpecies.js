@@ -1,0 +1,88 @@
+// Catalog of species available for purchase. Costs and needs are tuned for
+// gameplay pacing, not paleontological precision.
+export const SPECIES = [
+  {
+    id: 'trex',
+    name: 'Tyrannosaurus Rex',
+    icon: '🦖',
+    diet: 'Carnivore',
+    cost: 4000,
+    space: 4,
+    dangerous: true,
+    fact: 'A massive bipedal carnivore from the late Cretaceous. Needs a reinforced, ideally electric, fence — it will test weak enclosures.',
+  },
+  {
+    id: 'raptor',
+    name: 'Velociraptor',
+    icon: '🦅',
+    diet: 'Carnivore',
+    cost: 2200,
+    space: 2,
+    dangerous: true,
+    fact: 'A small, fast, and intelligent pack hunter. Clever enough to probe fences for weaknesses — keep an eye on enclosure integrity.',
+  },
+  {
+    id: 'dilophosaurus',
+    name: 'Dilophosaurus',
+    icon: '🦎',
+    diet: 'Carnivore',
+    cost: 1800,
+    space: 2,
+    dangerous: true,
+    fact: 'An early Jurassic carnivore known for its distinctive head crests. Territorial and needs sturdy fencing.',
+  },
+  {
+    id: 'triceratops',
+    name: 'Triceratops',
+    icon: '🦏',
+    diet: 'Herbivore',
+    cost: 2600,
+    space: 3,
+    dangerous: false,
+    fact: 'A large horned herbivore of the late Cretaceous. Docile but needs plenty of space to graze comfortably.',
+  },
+  {
+    id: 'brachiosaurus',
+    name: 'Brachiosaurus',
+    icon: '🦒',
+    diet: 'Herbivore',
+    cost: 5000,
+    space: 6,
+    dangerous: false,
+    fact: 'One of the tallest known dinosaurs, a gentle long-necked giant. Requires a very large enclosure.',
+  },
+  {
+    id: 'stegosaurus',
+    name: 'Stegosaurus',
+    icon: '🦕',
+    diet: 'Herbivore',
+    cost: 2400,
+    space: 3,
+    dangerous: false,
+    fact: 'Recognizable by the bony plates on its back and spikes on its tail. Calm, but will lash out if provoked.',
+  },
+  {
+    id: 'parasaurolophus',
+    name: 'Parasaurolophus',
+    icon: '🦤',
+    diet: 'Herbivore',
+    cost: 1600,
+    space: 2,
+    dangerous: false,
+    fact: 'A duck-billed herbivore with a distinctive curved head crest, likely used to make sound. Herds well with others.',
+  },
+  {
+    id: 'ankylosaurus',
+    name: 'Ankylosaurus',
+    icon: '🐢',
+    diet: 'Herbivore',
+    cost: 3000,
+    space: 3,
+    dangerous: false,
+    fact: 'A heavily armored herbivore with a club-like tail. Sturdy and low-maintenance, but slow to warm up to visitors.',
+  },
+]
+
+export function getSpecies(id) {
+  return SPECIES.find((s) => s.id === id)
+}

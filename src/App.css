@@ -1,0 +1,432 @@
+.app-shell {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 16px 20px 40px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.tagline {
+  margin: 4px 0 16px;
+  color: #4a5a44;
+  font-weight: 600;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.panel {
+  background: white;
+  border-radius: 10px;
+  padding: 14px 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.panel h2 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+}
+
+.panel h3 {
+  margin: 14px 0 6px;
+  font-size: 0.95rem;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.empty-hint {
+  color: #7a8577;
+  font-size: 0.9rem;
+}
+
+.label {
+  display: block;
+  font-size: 0.75rem;
+  color: #6a766a;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.value {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.value.negative {
+  color: #b91c1c;
+}
+
+/* Calendar */
+.calendar-readout {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.calendar-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.calendar-actions button {
+  flex: 1;
+}
+
+.game-over-text {
+  color: #b91c1c;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* Map */
+.map-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.enclosure {
+  border: 3px solid #16a34a;
+  border-radius: 10px;
+  padding: 10px;
+  background: #f5faf1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.enclosure-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fence-tag {
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 10px;
+  background: #e5e7eb;
+}
+
+.fence-tag.fence-electric {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.fence-bar-track {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.fence-bar-fill {
+  height: 100%;
+}
+
+.enclosure-meta {
+  font-size: 0.8rem;
+  color: #4a5a44;
+}
+
+.enclosure-dinos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-height: 36px;
+}
+
+.dino-token {
+  position: relative;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 4px 6px;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.dino-token.selected {
+  border-color: #2f6d3c;
+  box-shadow: 0 0 0 2px rgba(47, 109, 60, 0.3);
+}
+
+.dino-token.sick {
+  filter: grayscale(0.4);
+}
+
+.dino-mood {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.dino-mood[data-mood='good'] {
+  background: #22c55e;
+}
+
+.dino-mood[data-mood='ok'] {
+  background: #eab308;
+}
+
+.dino-mood[data-mood='bad'] {
+  background: #ef4444;
+}
+
+/* Roster */
+.roster-form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.roster-form select,
+.roster-form input {
+  flex: 1;
+  min-width: 140px;
+}
+
+.hint {
+  font-size: 0.85rem;
+  margin: 4px 0;
+}
+
+.hint.warn {
+  color: #b45309;
+}
+
+.species-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.species-card {
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  padding: 8px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.species-card.diet-carnivore {
+  background: #fff1f0;
+}
+
+.species-card.diet-herbivore {
+  background: #f0fbf0;
+}
+
+.species-icon {
+  font-size: 1.6rem;
+}
+
+.species-name {
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin: 4px 0 2px;
+}
+
+.species-meta {
+  font-size: 0.72rem;
+  color: #555;
+}
+
+.danger-badge {
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+/* Staff */
+.staff-type-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.staff-type-info {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.staff-icon {
+  font-size: 1.3rem;
+}
+
+.staff-label {
+  font-weight: 700;
+}
+
+.staff-count {
+  color: #4a5a44;
+  font-weight: 500;
+}
+
+.staff-desc {
+  font-size: 0.78rem;
+  color: #666;
+}
+
+.staff-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.staff-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  font-size: 0.9rem;
+}
+
+/* Finance */
+.finance-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.ticket-price-control {
+  margin-bottom: 12px;
+}
+
+.ticket-price-control input {
+  width: 100%;
+}
+
+.loan-control {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.loan-control input {
+  width: 100px;
+}
+
+.quarterly-report table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+.quarterly-report td {
+  padding: 3px 0;
+}
+
+.quarterly-report td:last-child {
+  text-align: right;
+}
+
+.total-row td {
+  border-top: 2px solid #ddd;
+  font-weight: 700;
+  padding-top: 6px;
+}
+
+/* Warnings */
+.warnings-panel {
+  border-left: 4px solid #eab308;
+}
+
+.event-list,
+.warning-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 8px;
+}
+
+.event-list li,
+.warning-list li {
+  padding: 6px 8px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+}
+
+.event-breakout,
+.event-gameover {
+  background: #fee2e2;
+  color: #7f1d1d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.event-death {
+  background: #ffedd5;
+  color: #7c2d12;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.warning-medium {
+  background: #fef9c3;
+  color: #713f12;
+}
+
+.warning-high {
+  background: #fed7aa;
+  color: #7c2d12;
+}
+
+.warning-critical {
+  background: #fecaca;
+  color: #7f1d1d;
+  font-weight: 700;
+}
+
+/* Fact panel */
+.species-title {
+  font-style: italic;
+  color: #555;
+  margin: 0 0 8px;
+}
+
+.dino-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
